@@ -1,0 +1,55 @@
+                       Plan de test : hasAlignement();
+
+   0   1   2   3           0   1   2   3           0   1   2   3  
+ -----------------       -----------------       -----------------
+0|   |   |   |   |      0|B S|W S|B R|W R|      0|W S|   |   |B R|
+ |   |   |   |   |       |S T|H S|S S|H S|       |H T|   |   |S S|
+ -----------------       -----------------       -----------------
+1|   |   |   |   |      1|W R|B R|B R|W S|      1|   |W R|B R|B R|
+ |   |   |   |   |       |H T|H S|H T|S S|       |   |H T|S T|H S|
+ -----------------       -----------------       -----------------
+2|   |   |   |   |      2|W R|B R|W S|B S|      2|W S|W R|W S|W R|
+ |   |   |   |   |       |S S|S T|H T|H S|       |S T|S T|S S|S S|
+ -----------------       -----------------       -----------------
+3|   |   |   |   |      3|W S|B S|W R|B S|      3|B R|   |   |W R|
+ |   |   |   |   |       |S T|S S|S T|H T|       |H T|   |   |H S|
+ -----------------       -----------------       -----------------
+
+Pour arriver à la méthode finale (hasAlignement()), j’ai choisi de 
+découper ma méthode en 4 sous méthodes :
+    I.	 Boolean hasAlignRow (Piece [][] pieces, int r) 
+    II.	 Boolean hasAlignColumn (Piece [][] pieces, int c)
+    III. Boolean hasAlignDiagonalG (Piece [][] pieces)
+    IV.	 Boolean hasAlignDiagonalD (Piece [][] pieces)
+    
+       méthode      | # | résultat attendu | résultat de la méthode | ce qui est testé 
+ ----------------------------------------------------------------------------------
+                    | 1 |       false      |          false         | ligne 0, tab3    
+ hasAlignRow()      | 2 |       false      |          false         | ligne 1, tab2     
+                    | 3 |       true       |          true          | ligne 2, tab3    
+ ----------------------------------------------------------------------------------
+                    | 1 |       false      |          false         | colonne 1, tab2    
+ hasAlignColumn()   | 2 |       false      |          false         | colonne 2, tab3      
+                    | 3 |       true       |          true          | colonne 3, tab3  
+ ----------------------------------------------------------------------------------
+                    | 1 |       false      |          false         | diagonale tab1   
+ hasAlignDiagonalG()| 2 |       false      |          false         | diagonale tab2
+                    | 3 |       true       |          true          | diagonale tab3 
+ ----------------------------------------------------------------------------------
+                    | 1 |       false      |          false         | diagonale tab1     
+ hasAlignDiagonalD()| 2 |       false      |          false         | diagonale tab2 
+                    | 3 |       true       |          true          | diagonale tab3 
+ ----------------------------------------------------------------------------------
+
+En apellant les méthodes ci-dessus on va savoir si on a un alignement correct 
+dans le tableau ou pas.
+
+
+
+
+
+
+
+
+
+
